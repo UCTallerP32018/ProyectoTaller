@@ -23,6 +23,7 @@ public class ProyectoTaller {
         PersonasController pc = new PersonasController();
         Persona p = new Persona("juan", "5771552", 0);
         
+        //Prueba de datos
         Datos.insertar(p);
         Persona p1 = (Persona)Datos.buscar(p);
         System.out.println(p1.getNombre()+" - "+p.getNombre());
