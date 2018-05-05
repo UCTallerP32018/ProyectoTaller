@@ -82,4 +82,12 @@ public class Persona {
             Vehiculo v = vehiculos.get(i);            
         }
     }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
+    
+    
+    
 }

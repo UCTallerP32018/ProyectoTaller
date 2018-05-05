@@ -7,7 +7,9 @@ package proyectotaller;
 
 import controlador.PersonasController;
 import modelo.Persona;
-import proyectotaller.datos.Datos;
+import proyectotaller.datos.Lista;
+import proyectotaller.datos.Nodo;
+import proyectotaller.datos.Puntero;
 import vista.jFPersonas;
 
 /**
@@ -20,13 +22,15 @@ public class ProyectoTaller {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        PersonasController pc = new PersonasController();
-        Persona p = new Persona("juan", "5771552", 0);
+      
+        Lista lp = new Lista();
+        lp.AgregarPersona(new Persona("Carlos", "500180", 0));
+        lp.AgregarPersona(new Persona("Pepito", "500181", 0));
+        lp.listar();
         
-        //Prueba de datos
-        Datos.insertar(p);
-        Persona p1 = (Persona)Datos.buscar(p);
-        System.out.println(p1.getNombre()+" - "+p.getNombre());
+        /*System.out.println(ptr.getNodo().getInfo());
+        ptr.setNodo(ptr.getNodo().getSgte().getNodo());
+        System.out.println(ptr.getNodo().getInfo());*/
         
         
     }
